@@ -1,0 +1,8 @@
+
+python_version >= 3.10,<3.12
+streamlit
+PyMuPDF
+faiss-cpu
+sentence-transformers
+openai
+numpy
