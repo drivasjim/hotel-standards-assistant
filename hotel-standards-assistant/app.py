@@ -6,7 +6,7 @@ import os
 st.set_page_config(page_title="Hotel Standards Assistant", layout="wide")
 st.title("📘 Hotel Standards Assistant")
 
-PDF_PATH = "data/lcbsa2025.pdf"
+PDF_PATH = "hotel-standards-assistant/data/lcbsa2025.pdf"
 
 if "index" not in st.session_state:
     if os.path.exists(PDF_PATH):
