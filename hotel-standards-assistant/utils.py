@@ -11,7 +11,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 def detect_language_and_translate(text):
     prompt = f"Detect the language of this text and translate it to English:\n\n{text}"
     openai.api_key = st.secrets["OPENAI_API_KEY"]
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}]
     )
@@ -21,7 +21,7 @@ def translate_back_to_original(answer_en, original_lang):
     if original_lang == 'en':
         return answer_en
     prompt = f"Translate the following answer to {original_lang}:\n\n{answer_en}"
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}]
     )
