@@ -1,4 +1,7 @@
+# Python version compatible with googletrans and httpx
+python_version >= 3.10,<3.12
 
+# App dependencies
 streamlit
 PyMuPDF
 faiss-cpu
